@@ -23,3 +23,5 @@ class ActionProvider {
 		}
 	};
 }
+
+export default ActionProvider;
