@@ -9,8 +9,8 @@ class ActionProvider {
 		this.addMessageToBotState(message);
 	};
 
-	addMessageToBotState = (message) => {
-		if (Array.isArray(message)) {
+	addMessageToBotState = (messages) => {
+		if (Array.isArray(messages)) {
 			this.setState((state) => ({
 				...state,
 				message: [ ...state.messages, ...messages ]
