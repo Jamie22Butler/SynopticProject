@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
+import ChatbotComponent from './Components/Chatbot/Chatbot';
 
 import './App.css'
 
@@ -13,7 +14,7 @@ function App() {
         <Switch>
         <Route exact path="/">
 						<div className="app-Content" data-testid="app">
-							<> </>
+							<ChatbotComponent/>
 						</div>
 					</Route>
 					<Route path="About" />

@@ -1,0 +1,18 @@
+.options-container {
+	text-align: center;
+	width: 100%;
+}
+
+.option-button {
+	margin: 5px;
+	border-radius: 15px;
+	box-shadow: transparent;
+	padding: 8px;
+	border-color: transparent;
+	background: #df807e;
+	text-align: center;
+	color: #fff;
+}
+.option-button:hover {
+	box-shadow: 1px 3px 5px #898d8d;
+}
