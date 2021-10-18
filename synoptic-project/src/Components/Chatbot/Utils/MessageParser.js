@@ -1,15 +1,29 @@
 class MessageParser {
-    constructor(actionProvier, state) {
-        this.actionProvier = actionProvier;
-        this.state = state;
-    }
+	constructor(actionProvider, state) {
+		this.actionProvider = actionProvider;
+		this.state = state;
+	}
 
     parse = (message) => {
-        const lowercase = message.toLowerCase();
+		const lowercase = message.toLowerCase();
 
-        // Proper message parsing logic will be implemented in a later commit.
-        console.log(lowercase)
-    }
+		if (
+			lowercase.includes('holiday') ||
+			lowercase.includes('book') ||
+			lowercase.includes('booking') ||
+			lowercase.includes('travel') ||
+			lowercase.includes('abroad')
+		) {
+			return this.actionProvider.handleTempOptions();
+		}
+		else if (
+			lowercase.includes('hot') ||
+			lowercase.includes('mild') ||
+			lowercase.includes('cold') 
+		) {
+			return this.actionProvider.handleCountryOptions();
+		}
+	};
 }
 
 export default MessageParser;
