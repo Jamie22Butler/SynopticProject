@@ -217,7 +217,7 @@
     border-color: #00A59C;
     border-radius: 5px;
     height: auto;
-    width: 80px;
+    width: 120px;
     top: 200px;
     right: 10px;
   }
@@ -225,16 +225,11 @@
   .toggle-button {
     border-style: none;
     background: transparent;
+    border-radius: 100%;
     align-items: center;
     justify-content: center;
-  }
-
-  .chatbot-header p {
-    position: absolute;
-    top: 150px;
-    right: 15px;
-    font-family: Arial, Verdana, Helvetica;
-    color: white;
+    transform: scale(1.5);
+    padding: 15px;
   }
 
   .feedback-wrapper {
@@ -257,6 +252,12 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     margin-left: 2vh;
+  }
+  .feedback-header button {
+    position: relative;
+    top: -65px;
+    left: 630px;
+    
   }
 
   .feedback-body {

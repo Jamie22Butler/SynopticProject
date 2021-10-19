@@ -15,7 +15,7 @@ const CloseButton = styled(CloseIcon)`
     color: #00A59C;
     transition: all 0.3s ease-in-out;
     &:hover {
-        color: #DF807E;
+        color: #898D8D;
     }
 `;
 
@@ -23,7 +23,7 @@ const ChatButton = styled(ChatIcon)`
     color: #00A59C;
     transition: all 0.3s ease-in-out;
     &:hover {
-        color: #DF807E;
+        color: #898D8D;
     }
 `;
 
@@ -40,14 +40,12 @@ const ChatbotComponent = () => {
 
 	const toggleFeedback = () => {
 		setShowBot(false);
-		setShowFeedback((prev) => !prev);
+		setShowFeedback(true);
+		setShowButton(false);
 	};
 
 	return (
 		<div className="chatbot-wrapper">
-			<div className="chatbot-header">
-				<p>Chatbot</p>
-			</div>
 			<div className="modal" data-testid="chat-bot" showmodal={showBot ? true : undefined}>
 				<div className="modal-buttons">
 					<button className="toggle-button" data-testid="toggle-button">

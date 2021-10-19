@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Switch>
         <Route exact path="/">
-						<div className="app-Content" data-testid="app">
+						<div className="app-content" data-testid="app">
 							<ChatbotComponent/>
 						</div>
 					</Route>

@@ -1,16 +1,12 @@
 .app-Wrapper {
-    height: 100%;
-    margin: 0;
-    font-family: Ubuntu;
-    font-size: 22px;
-}
-
-.app-Wrapper body {
-    margin: 0;
-}
-
-.app-Wrapper .App {
     display: flex;
     padding: 0px;
     margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.app-content {
+    height: 100%;
+    width: 100%;
 }
