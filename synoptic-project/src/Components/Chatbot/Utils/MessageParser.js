@@ -1,10 +1,21 @@
+import {collection, addDoc} from "@firebase/firestore";
+import db from "../../../Utils/Firebase";
+
+const writeToFirebase = async (input) => {
+	const docRef = await addDoc(collection(db, "Messages"), {
+		message: input
+	});
+};
+
 class MessageParser {
 	constructor(actionProvider, state) {
 		this.actionProvider = actionProvider;
 		this.state = state;
 	}
+	
 
     parse = (message) => {
+		writeToFirebase(message)
 		const lowercase = message.toLowerCase();
 
 		if (

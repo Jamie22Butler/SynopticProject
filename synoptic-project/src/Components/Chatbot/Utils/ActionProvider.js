@@ -16,7 +16,7 @@ class ActionProvider {
 
 		this.addMessageToBotState(tempGreet);
 
-		const tempResponse = this.createChatBotMessage('What  type of climate were you looking to travel to?', {
+		const tempResponse = this.createChatBotMessage('What type of climate were you looking to travel to?', {
 			widget: 'tempOptions',
 			delay: 4000
 		});
