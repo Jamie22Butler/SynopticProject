@@ -34,6 +34,8 @@ class MessageParser {
 		) {
 			return this.actionProvider.handleCountryOptions();
 		}
+
+		return this.actionProvider.handleDefault();
 	};
 }
 

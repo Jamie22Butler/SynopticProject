@@ -34,8 +34,12 @@ class ActionProvider {
 
 	// Default message handler for the chatbot
 	handleDefault = () => {
-		const message = this.createChatBotMessage('How can I help?');
-		this.addMessageToBotState(message);
+		const defaultOne = this.createChatBotMessage('Sorry, I couldn\'t quite answer that...');
+		this.addMessageToBotState(defaultOne);
+		const defaultTwo = this.createChatBotMessage('You\'ll have the opportunity to offer feedback when you close the chat agent.', {
+			delay: 1500
+		});
+		this.addMessageToBotState(defaultTwo);
 	};
 
 	addMessageToBotState = (messages) => {
