@@ -15,7 +15,7 @@ const CloseButton = styled(CloseIcon)`
     color: #00A59C;
     transition: all 0.3s ease-in-out;
     &:hover {
-        color: #898D8D;
+        color: #DF807E;
     }
 `;
 
@@ -23,7 +23,7 @@ const ChatButton = styled(ChatIcon)`
     color: #00A59C;
     transition: all 0.3s ease-in-out;
     &:hover {
-        color: #898D8D;
+        color: #DF807E;
     }
 `;
 

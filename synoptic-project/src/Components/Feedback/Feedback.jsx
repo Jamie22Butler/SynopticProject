@@ -9,7 +9,7 @@ const CloseButton = styled(CloseIcon)`
     color: #fff;
     transition: all 0.3s ease-in-out;
     &:hover {
-        color: #898D8D;
+        color: #DF807E;
     }
 `;
 
