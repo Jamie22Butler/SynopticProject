@@ -1,8 +1,8 @@
-import {collection, addDoc} from "@firebase/firestore";
-import db from "../../../Utils/Firebase";
+import { collection, addDoc } from '@firebase/firestore';
+import db from '../../../Utils/Firebase';
 
 const writeToFirebase = async (input) => {
-	const docRef = await addDoc(collection(db, "Messages"), {
+	const docRef = await addDoc(collection(db, 'Messages'), {
 		message: input
 	});
 };
@@ -12,10 +12,9 @@ class MessageParser {
 		this.actionProvider = actionProvider;
 		this.state = state;
 	}
-	
 
-    parse = (message) => {
-		writeToFirebase(message)
+	parse = (message) => {
+		writeToFirebase(message);
 		const lowercase = message.toLowerCase();
 
 		if (
@@ -26,12 +25,7 @@ class MessageParser {
 			lowercase.includes('abroad')
 		) {
 			return this.actionProvider.handleTempOptions();
-		}
-		else if (
-			lowercase.includes('hot') ||
-			lowercase.includes('mild') ||
-			lowercase.includes('cold') 
-		) {
+		} else if (lowercase.includes('hot') || lowercase.includes('mild') || lowercase.includes('cold')) {
 			return this.actionProvider.handleCountryOptions();
 		}
 

@@ -1,9 +1,9 @@
-import { cleanup, render, screen } from '@testing-library/react'
-import ChatBot from './ChatBot'
+import { cleanup, render, screen } from '@testing-library/react';
+import ChatBot from './ChatBot';
 
 afterEach(() => {
-    cleanup
-})
+	cleanup;
+});
 
 test('Renders ChatBot', () => {
 	render(<ChatBot />);
@@ -12,7 +12,7 @@ test('Renders ChatBot', () => {
 });
 
 test('Render toggle buttons', () => {
-	render(<ChatBot/>);
+	render(<ChatBot />);
 	const toggle = screen.getAllByTestId('toggle-button');
-	expect(toggle).toHaveLength(2)
+	expect(toggle).toHaveLength(2);
 });

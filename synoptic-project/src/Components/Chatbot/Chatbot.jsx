@@ -60,13 +60,7 @@ const ChatbotComponent = () => {
 						<Chatbot config={Config} messageParser={MessageParser} actionProvider={ActionProvider} />
 					) : null}
 				</div>
-				<div className = 'feedback-modal'>
-					{
-						showFeedback ? (
-							<FeedbackModal />
-						) : null
-					}
-				</div>
+				<div className="feedback-modal">{showFeedback ? <FeedbackModal /> : null}</div>
 			</div>
 		</div>
 	);
