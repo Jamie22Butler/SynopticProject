@@ -23,10 +23,36 @@ class ActionProvider {
 		this.addMessageToBotState(tempResponse);
 	};
 
-	//Handles the parsing for country input
-	handleCountryOptions = () => {
-		const countryMessage = this.createChatBotMessage('Now we need to select a country!', {
-			widget: 'CountryOptions',
+	//Handles the parsing for continent input
+	handleColdContinentOptions = () => {
+		const continentMessage = this.createChatBotMessage(
+			"Now we need to select a continent along with it's temperature!",
+			{
+				widget: 'ColdContinentOptions',
+				delay: 1500
+			}
+		);
+		this.addMessageToBotState(continentMessage);
+		const continentResponse = this.createChatBotMessage('Please type your response as: *continent* - *temp*');
+		this.addMessageToBotState(continentResponse);
+	};
+
+	//Handles the parsing for continent input
+	handleMildContinentOptions = () => {
+		const countryMessage = this.createChatBotMessage(
+			"Now we need to select a continent along with it's temperature!",
+			{
+				widget: 'MildContinentOptions',
+				delay: 1500
+			}
+		);
+		this.addMessageToBotState(countryMessage);
+	};
+
+	//Handles the parsing for continent input
+	handleHotContinentOptions = () => {
+		const countryMessage = this.createChatBotMessage("Now we need to select a continent along it's temperature!", {
+			widget: 'HotContinentOptions',
 			delay: 1500
 		});
 		this.addMessageToBotState(countryMessage);
@@ -45,6 +71,7 @@ class ActionProvider {
 		this.addMessageToBotState(defaultTwo);
 	};
 
+	// State logic handling the render of messages into the Chat Agent message container
 	addMessageToBotState = (messages) => {
 		if (Array.isArray(messages)) {
 			this.setState((state) => ({

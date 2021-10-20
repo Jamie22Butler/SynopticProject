@@ -2,6 +2,7 @@ import { collection, addDoc } from '@firebase/firestore';
 import db from '../../../Utils/Firebase';
 
 const writeToFirebase = async (input) => {
+	// eslint-disable-next-line -- docRef is never used outside of this  function due to the design
 	const docRef = await addDoc(collection(db, 'Messages'), {
 		message: input
 	});
@@ -25,8 +26,12 @@ class MessageParser {
 			lowercase.includes('abroad')
 		) {
 			return this.actionProvider.handleTempOptions();
-		} else if (lowercase.includes('hot') || lowercase.includes('mild') || lowercase.includes('cold')) {
-			return this.actionProvider.handleCountryOptions();
+		} else if (lowercase.includes('hot')) {
+			return this.actionProvider.handleHotContinentOptions();
+		} else if (lowercase.includes('mild')) {
+			return this.actionProvider.handleMildContinentOptions();
+		} else if (lowercase.includes('cold')) {
+			return this.actionProvider.handleColdContinentOptions();
 		}
 
 		return this.actionProvider.handleDefault();

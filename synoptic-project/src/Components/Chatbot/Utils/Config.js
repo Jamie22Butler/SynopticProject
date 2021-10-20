@@ -1,7 +1,10 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import CategoryOptions from '../Options/Category/CategoryOptions';
-import CountryOptions from '../Options/Country/MildCountryOptions';
-import HotelOptions from '../Options/HotelName/HotelOptions';
+import ColdContinentOptions from '../Options/Continent/ColdContinentOptions'
+import MildContinentOptions from '../Options/Continent/MildContinentOptions'
+import HotContinentOptions from '../Options/Continent/HotContinentOptions'
+
+// import HotelOptions from '../Options/HotelName/HotelOptions';
 import TempOptions from '../Options/TempRating/TempOptions';
 
 const botName = 'Holiday Bot';
@@ -24,8 +27,16 @@ const config = {
 			widgetFunc: (props) => <TempOptions {...props} />
 		},
 		{
-			widgetName: 'CountryOptions',
-			widgetFunc: (props) => <CountryOptions {...props} />
+			widgetName: 'ColdContinentOptions',
+			widgetFunc: (props) => <ColdContinentOptions {...props} />
+		},
+        {
+			widgetName: 'HotContinentOptions',
+			widgetFunc: (props) => <HotContinentOptions {...props} />
+		},
+        {
+			widgetName: 'MildContinentOptions',
+			widgetFunc: (props) => <MildContinentOptions {...props} />
 		}
 		// {
 		//     widgetName: 'HotelOptions',

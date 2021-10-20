@@ -1,35 +1,36 @@
 import React from 'react';
 import '../Options.css';
 
-const HotCountryOptions = (props) => {
+const ColdContinentOptions = (props) => {
 	const options = [
 		{
-			text: 'Australia',
-			type: 'hot',
+			text: 'Africa',
+			temp: 'cold',
 			handler: props,
-			id: 5
+			id: 1
+		},
+
+		{
+			text: 'Antarctica',
+			temp: 'cold',
+			handler: props,
+			id: 2
 		},
 		{
-			text: 'U.A.E',
-			type: 'hot',
+			text: 'Arctic',
+			temp: 'cold',
 			handler: props,
-			id: 9
-		},
-		{
-			text: 'India',
-			type: 'hot',
-			handler: props,
-			id: 16
+			id: 3
 		}
 	];
 
 	const buttons = options.map((options) => (
 		<button key={options.id} onCLick={options.handler} className={'option-button'}>
-			{options.text}
+			{options.text}, {options.temp}
 		</button>
 	));
 
 	return <div className="options-container">{buttons}</div>;
 };
 
-export default HotCountryOptions;
+export default ColdContinentOptions;

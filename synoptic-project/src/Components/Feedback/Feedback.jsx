@@ -17,23 +17,28 @@ const FeedbackModal = () => {
 	const [ showButton, setShowButton ] = useState(true);
 	const [ showModal, setShowModal ] = useState(true);
 
+	// Create a Firestore document with a field of "feedback", setting the value to the input passed through props under the "User-Feedback" collection
 	const writeToFirebase = async (input) => {
+		// eslint-disable-next-line -- docRef is never used outside of this  function due to the design
 		const docRef = await addDoc(collection(db, 'User-Feedback'), {
 			feedback: input
 		});
 	};
 
+	// Renders the message in the text area as the user types
 	const handleChange = (event) => {
 		setFeedback(event.target.value);
 	};
 
+	// Handles the onClick trigger event from the user submitting feedback
 	const handleSubmit = (event) => {
-		event.preventDefault();
+		event.preventDefault(); // Prevents page from refreshing
 		writeToFirebase(feedback);
-		setShowButton(false);
+		setShowButton(false); // Unmounts clos button
 		setFeedback('Thanks for your feedback!');
 	};
 
+	// Toggles the mounting of the Feedback modal
 	const toggleModal = () => {
 		setShowModal(false);
 	};

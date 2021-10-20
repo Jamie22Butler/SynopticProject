@@ -1,14 +1,6 @@
 import React from 'react';
 import '../Options.css';
 
-import { createChatBotMessage } from 'react-chatbot-kit';
-
-const handleCountryOptions = (props) => {
-	createChatBotMessage(`So you've chosen a ${props.text} climate`, {
-		widget: 'CountryOptions'
-	});
-};
-
 const TempOptions = (props) => {
 	const options = [
 		{
