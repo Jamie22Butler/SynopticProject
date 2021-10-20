@@ -15,7 +15,7 @@ class MessageParser {
 	}
 
 	parse = (message) => {
-		writeToFirebase(message);
+		// writeToFirebase(message);
 		const lowercase = message.toLowerCase();
 
 		if (
@@ -32,6 +32,10 @@ class MessageParser {
 			return this.actionProvider.handleMildContinentOptions();
 		} else if (lowercase.includes('cold')) {
 			return this.actionProvider.handleColdContinentOptions();
+		} else if (lowercase.includes('eight')) {
+			return this.actionProvider.handleMildNAOptions();
+		} else if (lowercase.includes('seven')) {
+			return this.actionProvider.handleMildEUOptions();
 		}
 
 		return this.actionProvider.handleDefault();

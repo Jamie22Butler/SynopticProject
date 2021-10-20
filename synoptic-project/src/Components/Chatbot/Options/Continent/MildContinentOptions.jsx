@@ -7,37 +7,37 @@ const MildContinentOptions = (props) => {
 			text: 'Asia',
 			temp: 'mild',
 			handler: props,
-			id: 1
+			id: 6
 		},
 		{
 			text: 'Europe',
 			temp: 'mild',
 			handler: props,
-			id: 2
+			id: 7
 		},
 		{
 			text: 'North America',
 			temp: 'mild',
 			handler: props,
-			id: 3
+			id: 8
 		},
 		{
 			text: 'Australia',
 			temp: 'mild',
 			handler: props,
-			id: 4
+			id: 9
 		},
 		{
 			text: 'Africa',
 			temp: 'mild',
 			handler: props,
-			id: 5
+			id: 10
 		},
 	];
 
 	const buttons = options.map((options) => (
 		<button key={options.id} onCLick={options.handler} className={'option-button'}>
-			{options.text}, {options.temp}
+			{options.id}.{options.text}
 		</button>
 	));
 

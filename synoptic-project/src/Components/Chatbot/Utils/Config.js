@@ -3,6 +3,8 @@ import CategoryOptions from '../Options/Category/CategoryOptions';
 import ColdContinentOptions from '../Options/Continent/ColdContinentOptions'
 import MildContinentOptions from '../Options/Continent/MildContinentOptions'
 import HotContinentOptions from '../Options/Continent/HotContinentOptions'
+import MildNAOptions from '../Options/HotelName/MildNAOptions';
+import MildEUOptions from '../Options/HotelName/MildEUOptions';
 
 // import HotelOptions from '../Options/HotelName/HotelOptions';
 import TempOptions from '../Options/TempRating/TempOptions';
@@ -37,11 +39,15 @@ const config = {
         {
 			widgetName: 'MildContinentOptions',
 			widgetFunc: (props) => <MildContinentOptions {...props} />
+		},
+		{
+		    widgetName: 'MildNAOptions',
+		    widgetFunc: (props) => <MildNAOptions {...props} />
+		},
+		{
+		    widgetName: 'MildEUOptions',
+		    widgetFunc: (props) => <MildEUOptions {...props} />
 		}
-		// {
-		//     widgetName: 'HotelOptions',
-		//     widgetFunc: (props) => <HotelOptions {...props} />
-		// }
 	]
 };
 

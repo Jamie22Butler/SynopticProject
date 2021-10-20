@@ -7,19 +7,19 @@ const HotContinentOptions = (props) => {
 			text: 'Australia',
 			temp: 'hot',
 			handler: props,
-			id: 1
+			id: 4
 		},
 		{
 			text: 'Asia',
 			temp: 'hot',
 			handler: props,
-			id: 2
+			id: 5
 		}
 	];
 
 	const buttons = options.map((options) => (
 		<button key={options.id} onCLick={options.handler} className={'option-button'}>
-			{options.text}, {options.temp}
+			{options.id}.{options.text}
 		</button>
 	));
 
