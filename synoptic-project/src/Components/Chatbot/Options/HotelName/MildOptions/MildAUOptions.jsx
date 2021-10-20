@@ -1,26 +1,20 @@
 import React from 'react';
-import '../Options.css';
+import '../../Options.css';
 
-const MildNAOptions = (props) => {
+const MildAUOptions = (props) => {
     const options = [
         {
-            text: 'Casablanca',
-            price: 29,
+            text: 'SeaViews',
+            price: 54,
             handler: props,
-            id: 1
+            id: 10
         },
         {
-            text: 'Relaxamax',
-            price: 28,
+            text: 'ForestRetreat',
+            price: 89,
             handler: props,
-            id: 2
+            id: 17
         },
-        {
-            text: 'Apple City',
-            price: 27,
-            handler: props,
-            id: 3
-        }
     ]
 
     const buttons = options.map((options) => (
@@ -32,4 +26,4 @@ const MildNAOptions = (props) => {
     return <div className="options-container">{buttons}</div>;
 };
 
-export default MildNAOptions;
+export default MildAUOptions;

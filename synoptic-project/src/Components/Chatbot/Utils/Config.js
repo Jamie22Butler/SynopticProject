@@ -3,8 +3,8 @@ import CategoryOptions from '../Options/Category/CategoryOptions';
 import ColdContinentOptions from '../Options/Continent/ColdContinentOptions'
 import MildContinentOptions from '../Options/Continent/MildContinentOptions'
 import HotContinentOptions from '../Options/Continent/HotContinentOptions'
-import MildNAOptions from '../Options/HotelName/MildNAOptions';
-import MildEUOptions from '../Options/HotelName/MildEUOptions';
+import MildNAOptions from '../Options/HotelName/MildOptions/MildNAOptions';
+import MildEUOptions from '../Options/HotelName/MildOptions/MildEUOptions';
 
 // import HotelOptions from '../Options/HotelName/HotelOptions';
 import TempOptions from '../Options/TempRating/TempOptions';
