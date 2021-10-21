@@ -1,0 +1,10 @@
+.toggle-button {
+    border-style: none;
+    background: transparent;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.5);
+    padding: 15px;
+    display: flex;
+  }

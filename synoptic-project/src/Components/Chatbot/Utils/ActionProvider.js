@@ -16,28 +16,82 @@ class ActionProvider {
 
 		this.addMessageToBotState(tempGreet);
 
-		const tempResponse = this.createChatBotMessage('What  type of climate were you looking to travel to?', {
+		const tempResponse = this.createChatBotMessage('What type of climate were you looking to travel to?', {
 			widget: 'tempOptions',
 			delay: 4000
 		});
 		this.addMessageToBotState(tempResponse);
 	};
 
-	//Handles the parsing for country input
-	handleCountryOptions = () => {
-		const countryMessage = this.createChatBotMessage('Now we need to select a country!', {
-			widget: 'CountryOptions',
-			delay: 1500
+	//Handles the parsing for continent input
+	handleColdContinentOptions = () => {
+		const continentMessage = this.createChatBotMessage(
+			"Now we need to select a continent!"
+		);
+		this.addMessageToBotState(continentMessage);
+		const continentResponse = this.createChatBotMessage('Please reponsd with the option number in alphabeitcal form', {
+			widget: 'ColdContinentOptions',
+			delay: 2000
 		});
-		this.addMessageToBotState(countryMessage);
+		this.addMessageToBotState(continentResponse);
+	};
+
+	//Handles the parsing for continent input
+	handleMildContinentOptions = () => {
+		const continentMessage = this.createChatBotMessage(
+			"Now we need to select a continent!"
+		);
+		this.addMessageToBotState(continentMessage);
+		const continentResponse = this.createChatBotMessage('Please reponsd with the option number in alphabeitcal form', {
+			widget: 'MildContinentOptions',
+			delay: 2000
+		});
+		this.addMessageToBotState(continentResponse);
+	};
+
+	//Handles the parsing for continent input
+	handleHotContinentOptions = () => {
+		const continentMessage = this.createChatBotMessage(
+			"Now we need to select a continent!"
+		);
+		this.addMessageToBotState(continentMessage);
+		const continentResponse = this.createChatBotMessage('Please reponsd with the option number in alphabeitcal form', {
+			widget: 'HotContinentOptions',
+			delay: 2000
+		});
+		this.addMessageToBotState(continentResponse);
 	};
 
 	// Default message handler for the chatbot
 	handleDefault = () => {
-		const message = this.createChatBotMessage('How can I help?');
-		this.addMessageToBotState(message);
+		const defaultOne = this.createChatBotMessage("Sorry, I couldn't quite answer that...");
+		this.addMessageToBotState(defaultOne);
+		const defaultTwo = this.createChatBotMessage(
+			"You'll have the opportunity to offer feedback when you close the chat agent.",
+			{
+				delay: 1500
+			}
+		);
+		this.addMessageToBotState(defaultTwo);
 	};
 
+	handleMildNAOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'MildNAOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleMildEUOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'MildEUOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	// State logic handling the render of messages into the Chat Agent message container
 	addMessageToBotState = (messages) => {
 		if (Array.isArray(messages)) {
 			this.setState((state) => ({
