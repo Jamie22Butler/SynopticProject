@@ -15,7 +15,7 @@ class MessageParser {
 	}
 
 	parse = (message) => {
-		// writeToFirebase(message);
+		writeToFirebase(message);
 		const lowercase = message.toLowerCase();
 
 		if (
