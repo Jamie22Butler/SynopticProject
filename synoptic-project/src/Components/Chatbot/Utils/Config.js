@@ -3,10 +3,20 @@ import CategoryOptions from '../Options/Category/CategoryOptions';
 import ColdContinentOptions from '../Options/Continent/ColdContinentOptions'
 import MildContinentOptions from '../Options/Continent/MildContinentOptions'
 import HotContinentOptions from '../Options/Continent/HotContinentOptions'
+
 import MildNAOptions from '../Options/HotelName/MildOptions/MildNAOptions';
 import MildEUOptions from '../Options/HotelName/MildOptions/MildEUOptions';
+import MildAFOptions from '../Options/HotelName/MildOptions/MildAFOptions'
+import MildASOptions from '../Options/HotelName/MildOptions/MildASOptions'
+import MildAUOptions from '../Options/HotelName/MildOptions/MildAUOptions'
 
-// import HotelOptions from '../Options/HotelName/HotelOptions';
+import ColdARCOptions from '../Options/HotelName/ColdOptions/ColdARCOptions';
+import ColdANTOptions from '../Options/HotelName/ColdOptions/ColdANTOptions';
+import ColdAFOptions from '../Options/HotelName/ColdOptions/ColdAFOptions';
+
+import HotASOptions from '../Options/HotelName/HotOptions/HotASOptions';
+import HotAUOptions from '../Options/HotelName/HotOptions/HotAUOptions';
+
 import TempOptions from '../Options/TempRating/TempOptions';
 
 const botName = 'Holiday Bot';
@@ -47,6 +57,38 @@ const config = {
 		{
 		    widgetName: 'MildEUOptions',
 		    widgetFunc: (props) => <MildEUOptions {...props} />
+		},
+		{
+		    widgetName: 'MildAFOptions',
+		    widgetFunc: (props) => <MildAFOptions {...props} />
+		},
+		{
+		    widgetName: 'MildAUOptions',
+		    widgetFunc: (props) => <MildAUOptions {...props} />
+		},
+		{
+		    widgetName: 'MildASOptions',
+		    widgetFunc: (props) => <MildASOptions {...props} />
+		},
+		{
+		    widgetName: 'ColdANTOptions',
+		    widgetFunc: (props) => <ColdANTOptions {...props} />
+		},
+		{
+		    widgetName: 'ColdARCOptions',
+		    widgetFunc: (props) => <ColdARCOptions {...props} />
+		},
+		{
+		    widgetName: 'ColdAFOptions',
+		    widgetFunc: (props) => <ColdAFOptions {...props} />
+		},
+		{
+		    widgetName: 'HotAUOptions',
+		    widgetFunc: (props) => <HotAUOptions {...props} />
+		},
+		{
+		    widgetName: 'HotASOptions',
+		    widgetFunc: (props) => <HotASOptions {...props} />
 		}
 	]
 };

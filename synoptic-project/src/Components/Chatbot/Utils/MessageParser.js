@@ -32,10 +32,26 @@ class MessageParser {
 			return this.actionProvider.handleMildContinentOptions();
 		} else if (lowercase.includes('cold')) {
 			return this.actionProvider.handleColdContinentOptions();
-		} else if (lowercase.includes('eight')) {
-			return this.actionProvider.handleMildNAOptions();
+		} else if (lowercase.includes('one')) {
+			return this.actionProvider.handleColdAFOptions();
+		} else if (lowercase.includes('two')) {
+			return this.actionProvider.handleColdANTOptions();
+		} else if (lowercase.includes('three')) {
+			return this.actionProvider.handleColdARCOptions();
+		} else if (lowercase.includes('four')) {
+			return this.actionProvider.handleHotAUOptions();
+		} else if (lowercase.includes('five')) {
+			return this.actionProvider.handleHotASOptions();
+		} else if (lowercase.includes('six')) {
+			return this.actionProvider.handleMildASOptions();
 		} else if (lowercase.includes('seven')) {
 			return this.actionProvider.handleMildEUOptions();
+		} else if (lowercase.includes('eight')) {
+			return this.actionProvider.handleMildNAOptions();
+		}  else if (lowercase.includes('nine')) {
+			return this.actionProvider.handleMildAUOptions();
+		} else if (lowercase.includes('ten')) {
+			return this.actionProvider.handleMildAFOptions();
 		}
 
 		return this.actionProvider.handleDefault();

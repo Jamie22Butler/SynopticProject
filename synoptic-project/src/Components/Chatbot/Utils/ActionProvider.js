@@ -75,6 +75,7 @@ class ActionProvider {
 		this.addMessageToBotState(defaultTwo);
 	};
 
+//Mild Options
 	handleMildNAOptions = () => {
 		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
 			widget: 'MildNAOptions',
@@ -86,6 +87,71 @@ class ActionProvider {
 	handleMildEUOptions = () => {
 		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
 			widget: 'MildEUOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleMildASOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'MildASOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleMildAUOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'MildAUOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleMildAFOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'MildAFOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+//Hot Options
+	handleHotASOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'HotASOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleHotAUOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'MildAUOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleColdARCOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'ColdARCOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleColdANTOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'ColdANTOptions',
+			delay: 1500
+		});
+		this.addMessageToBotState(message)
+	};
+
+	handleColdAUOptions = () => {
+		const message = this.createChatBotMessage('Here are the options we\'d recommend', {
+			widget: 'ColdAUOptions',
 			delay: 1500
 		});
 		this.addMessageToBotState(message)
